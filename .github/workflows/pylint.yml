@@ -21,3 +21,4 @@ jobs:
     - run: pip3 install -U pip setuptools
     - run: pip3 install -U -r requirements.txt
     - run: pylint --rcfile=pylint.rc src/
+
