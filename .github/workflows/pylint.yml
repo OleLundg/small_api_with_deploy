@@ -21,4 +21,4 @@ jobs:
     - name: Install dependencies
     - run: pip3 install -U pip setuptools
     - run: pip3 install -U -r requirements.txt
-    - run: pylint --rcfile=.pylintrc src/
+    - run: pylint --rcfile=pylint.rc src/
