@@ -25,3 +25,4 @@ jobs:
     - name: Analysing the code with pylint
       run: |
         pylint $(git ls-files '*.py')
+        args = "pip install -r requirements.txt ; pylint **/*.py"
