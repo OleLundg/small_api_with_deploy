@@ -20,7 +20,7 @@ def test_second_data(client):
     """
     Test the data from a call to the second end-point
     :param client: An app test client from the fixture
-    :return: None!!!
+    :return: None!!!!
     """
     response = client.get('/api/v1.0/second')
     data = json.loads(response.text)
