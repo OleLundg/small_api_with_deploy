@@ -1,6 +1,6 @@
 name: Pylint
 
-on: 
+on:
   push:
     branches-ignore: [master, main]
   pull_request:
@@ -18,10 +18,7 @@ jobs:
       uses: actions/setup-python@v3
       with:
         python-version: ${{ matrix.python-version }}
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
-        pip install pylint
-    - name: Analysing the code with pylint
-      run: |
-        pylint $(git ls-files '*.py')
+    - name: Install dependencies2
+    - run: pip3 install -U pip setuptools
+    - run: pip3 install -U -r requirements.txt
+    - run: pylint --rcfile=pylint.rc src/
