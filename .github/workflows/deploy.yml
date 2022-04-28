@@ -15,3 +15,5 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "wokie-flask-api" #Must be unique in Heroku
           heroku_email: "joakim.wassberg@arthead.se"
+          justlogin: true
+      - run: heroku auth:whoami
