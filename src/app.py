@@ -40,6 +40,16 @@ def create_app():
 
         return Response(json.dumps(data), 200, content_type='application/json')
 
+
+    @app.get('/api/v1.0/fourth')
+    def fourth_get():
+        data = {
+            'name': 'Ole',
+            'age': 33
+        }
+
+        return Response(json.dumps(data), 200, content_type='application/json')
+
     return app
 
 
